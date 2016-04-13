@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../bower_components/d3/d3.js" type="text/javascript"></script>
+</head>
+<body>
+    <script>
+        //sort quantitative data into categories
+        //quantile splits array into equaös
+        var sampleArray = [423,124,66,424,58,10,900,44,1];
+        var qScale = d3.scale.quantile().domain(sampleArray).range([0,1,2]); //categories
+        qScale(423); //returns 2
+        qScale(20); //returns 0
+        qScale(10000); //returns 2
+
+        var qScaleName = d3.scale.quantile().domain(sampleArray).range(["small", "medium", "large"]); //labeled categories
+        qScaleName(68); //returns "medium"
+        qScaleName(20); //returns small
+        qScaleName(10000); //returns large
+    </script>
+</body>
+</html>

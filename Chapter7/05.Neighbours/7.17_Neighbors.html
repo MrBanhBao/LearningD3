@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="../../bower_components/d3/d3.js" type="text/javascript"></script>
+    <script src="../../bower_components/queue-async/queue.min.js" type="text/javascript"></script>
+    <script src="../../bower_components/d3-geo-projection/d3.geo.projection.js"></script>
+    <script src="../../bower_components/colorbrewer/colorbrewer.js"></script>
+    <script src="../../bower_components/topojson/topojson.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        path.countries {
+            stroke-width: 1;
+            stroke: black;
+            opacity: .5;
+            fill: red;
+        }
+        circle.cities {
+            stroke-width: 1;
+            stroke: black;
+            fill: white;
+        }
+        circle.centroid {
+            fill: red;
+            pointer-events: none;
+        }
+        rect.bbox {
+            fill: none;
+            stroke-dasharray: 5 5;
+            stroke: black;
+            stroke-width: 2;
+            pointer-events: none;
+        }
+        path.graticule {
+            fill: none;
+            stroke-width: 1;
+            stroke: black;
+        }
+        path.graticule.outline {
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+<svg style="width: 500px; height: 500px; border: 1px solid gray ">
+
+</svg>
+<div id="controls"></div>
+<script src="7.17_Neighbors.js" type="text/javascript"></script>
+</body>
+</html>
